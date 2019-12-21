@@ -1,0 +1,12 @@
+version: "3.5"
+ 
+services:
+  dockerized-angular-project:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: dockerized-angular-project
+    image: dockerized-angular-project
+    restart: unless-stopped
+    ports:
+      - 80:80
